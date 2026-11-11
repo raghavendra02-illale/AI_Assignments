@@ -1,0 +1,19 @@
+1. **Why use a private `__marks` attribute?**
+
+It protects the marks from being changed directly. The `set_marks()` method makes sure the entered marks are between 0 and 100.
+
+2. **Why use `__str__`?**
+
+It helps display student details in a simple and readable format whenever we print a Student object.
+
+3. **What is the difference between CSV and JSON?**
+
+CSV stores information in rows and columns, while JSON stores data in a structured format using lists and dictionaries.
+
+4. **Why use try/except/finally?**
+
+The `try` block contains code that may produce an error, `except` handles the error, and `finally` executes at the end regardless of whether an error occurs.
+
+**Voice Note:**
+
+The `write_student_files()` function saves student details in three different formats. First, it writes the student information into a text file using a loop. Next, it uses `DictWriter` to store the details in a CSV file with rows and columns. Finally, it uses `json.dump()` to save the student information in JSON format. This makes it easy to store and access student data in different file formats.
