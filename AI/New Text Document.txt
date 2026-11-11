@@ -1,0 +1,48 @@
+Step 1: Check which Python versions are installed
+Open a new PowerShell terminal and run:
+py -0p
+
+
+If py is not recognized, try:
+where.exe python
+
+
+Step 2: If Python 3.14 is installed, create a fresh environment
+Run these commands from your project folder:
+cd "C:\Users\HP\OneDrive\Desktop\Raghu\AI"
+
+
+py -3.14 -m venv .venv314
+
+
+Activate it:
+& .\.venv314\Scripts\Activate.ps1
+
+
+Your terminal should now start with (.venv314).
+If py -3.14 fails, don't continue to the next step yet. Share the error; we need to identify which Python versions are available.
+
+Step 3: Install FastAPI
+Inside (.venv314), run:
+python -m pip install --upgrade pip
+python -m pip install "fastapi[standard]"
+
+
+Verify both packages:
+python -m pip show fastapi
+python -m pip show uvicorn
+
+
+Both should show package details instead of Package(s) not found.
+Step 4: Start your application
+If your code is in Myslef.py:
+cd studentAI
+python -m uvicorn Myslef:app --reload
+
+
+If your code is in main.py, use:
+python -m uvicorn main:app --reload
+
+
+useing FastAPI
+fastapi dev Myslef.py 
