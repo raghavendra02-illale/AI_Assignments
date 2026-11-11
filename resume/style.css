@@ -1,0 +1,210 @@
+/* ---- Modern resume theme ---- */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    background: #081225;
+}
+
+body {
+    font-family: "Inter", "Segoe UI", Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #e8eefc;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 42px;
+    background:
+        radial-gradient(circle at 10% 0%, rgba(37, 99, 235, 0.22), transparent 34%),
+        radial-gradient(circle at 100% 30%, rgba(14, 165, 233, 0.13), transparent 30%),
+        linear-gradient(145deg, #111c33 0%, #0b1427 55%, #101b31 100%);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 24px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+}
+
+/* ---- Header ---- */
+header {
+    position: relative;
+    padding: 8px 0 24px;
+    margin-bottom: 28px;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(90deg, #38bdf8, #6366f1, transparent) 1;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(30px, 5vw, 42px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+    color: #f8fbff;
+}
+
+.role {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #7dd3fc;
+}
+
+.contact {
+    margin: 14px 0 0;
+    font-size: 14px;
+    color: #bdc9df;
+    overflow-wrap: anywhere;
+}
+
+a {
+    color: #7dd3fc;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(125, 211, 252, 0.4);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* ---- Sections ---- */
+section {
+    margin: 26px 0;
+    padding: 2px 0;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 14px;
+    padding-bottom: 9px;
+    font-size: 20px;
+    color: #f1f5ff;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+h2::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 22px;
+    flex: 0 0 5px;
+    border-radius: 5px;
+    background: linear-gradient(180deg, #38bdf8, #6366f1);
+}
+
+p {
+    color: #d1daeb;
+}
+
+/* ---- Skills chips ---- */
+.skills {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills li {
+    color: #dff5ff;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.13), rgba(99, 102, 241, 0.15));
+    border: 1px solid rgba(125, 211, 252, 0.25);
+    padding: 7px 13px;
+    border-radius: 999px;
+    font-size: 14px;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.skills li:hover {
+    transform: translateY(-2px);
+    background: rgba(56, 189, 248, 0.2);
+}
+
+/* ---- Project cards ---- */
+.project {
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-left: 4px solid #38bdf8;
+    background: rgba(255, 255, 255, 0.035);
+    padding: 16px 18px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.project:hover {
+    transform: translateY(-2px);
+    border-color: rgba(56, 189, 248, 0.55);
+}
+
+.project h3 {
+    margin: 0 0 6px;
+    font-size: 17px;
+    color: #f8fbff;
+}
+
+.tags {
+    font-size: 13px;
+    color: #7dd3fc;
+    margin: 6px 0 0;
+}
+
+/* ---- Footer ---- */
+footer {
+    margin-top: 35px;
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
+    padding-top: 14px;
+    font-size: 13px;
+    color: #91a0ba;
+    text-align: center;
+}
+
+footer p {
+    color: inherit;
+}
+
+/* ---- Phone and tablet layout ---- */
+@media (max-width: 600px) {
+    body {
+        margin: 12px;
+        padding: 22px 18px;
+        border-radius: 16px;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+
+    .role {
+        font-size: 16px;
+    }
+
+    .contact {
+        font-size: 13px;
+        line-height: 1.9;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .skills {
+        gap: 8px;
+    }
+
+    .skills li {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+}
+
+/* ---- Respect reduced-motion settings ---- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}

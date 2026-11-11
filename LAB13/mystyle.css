@@ -1,0 +1,93 @@
+
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f0f4f8;
+    color: #243047;
+}
+
+header {
+    background: #17365d;
+    color: white;
+    padding: 28px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 4px;
+}
+
+.role {
+    color: #d5e7ff;
+    font-size: 18px;
+}
+
+.about, .skills, .projects {
+    background: white;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+h2 {
+    color: #17365d;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skills li {
+    background: #e8f1fb;
+    padding: 6px 12px;
+    border-radius: 14px;
+}
+
+.card {
+    background: #f8fafc;
+    padding: 16px;
+    margin: 12px 0;
+    border: 1px solid #dbe3ed;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    color: #64748b;
+    margin-top: 24px;
+}
+
+
+
+.facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.fact {
+    flex: 1;
+    min-width: 120px;
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.fact b {
+    display: block;
+    font-size: 28px;
+}
+
+.fact span {
+    color: #777777;
+    font-size: 14px;
+}
