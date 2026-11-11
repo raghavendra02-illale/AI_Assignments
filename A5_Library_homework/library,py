@@ -1,0 +1,68 @@
+class Book:
+    def __init__(self, title, author, copies=1):
+        self.title = title
+        self.author = author
+        self.__copies = copies
+
+    def get_copies(self):
+        return self.__copies
+
+    def add_copies(self, count=1):
+        if count > 0:
+            self.__copies += count
+
+    def borrow_copy(self):
+        if self.__copies <= 0:
+            return False
+        self.__copies -= 1
+        return True
+
+    def return_copy(self):
+        self.__copies += 1
+
+    def __str__(self):
+        return f"'{self.title}' by {self.author} — {self.__copies} copies"
+
+
+class Library:
+    def __init__(self):
+        self.books = {}
+
+    def add_book(self, book):
+        if book.title in self.books:
+            self.books[book.title].add_copies(book.get_copies())
+        else:
+            self.books[book.title] = book
+
+    def show_books(self):
+        if not self.books:
+            print("The library is empty.")
+        for book in self.books.values():
+            print(book)
+
+    def borrow_book(self, title):
+        book = self.books.get(title)
+        if book is None:
+            print("Book not found.")
+        elif not book.borrow_copy():
+            print("No copies available.")
+        else:
+            print(f"Borrowed: {title}")
+
+    def return_book(self, title):
+        book = self.books.get(title)
+        if book is None:
+            print("Book not found.")
+        else:
+            book.return_copy()
+            print(f"Returned: {title}")
+
+
+if __name__ == "__main__":
+    library = Library()
+    library.add_book(Book("Python Basics", "A. Teacher", 2))
+    library.add_book(Book("Python Basics", "A. Teacher", 1))
+    library.show_books()
+    library.borrow_book("Python Basics")
+    library.return_book("Python Basics")
+    library.show_books()

@@ -1,0 +1,7 @@
+Part B choice: I chose the greatest common divisor (GCD) program because it gives practice using a while loop and the remainder operator.
+
+What did not work the first time:
+I initially needed to check the loop condition carefully. The loop must continue while the second number is not zero. Each iteration replaces the two values with the second value and the remainder.
+
+When would I use while versus for?
+I use a for loop when I know how many times I want to repeat something or when I am going through a sequence. I use a while loop when I want to repeat until a condition changes, such as continuing the GCD calculation until the remainder becomes zero
